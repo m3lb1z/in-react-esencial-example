@@ -4,7 +4,13 @@ const MiFormulario = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "ejemplo@domain.com",
-    password: "123456",
+    password: "",
+  });
+
+  const [formErrors, setFormErrors] = useState({
+    username: "",
+    email: "",
+    password: "",
   });
 
   const procesarCambio = (event) => {
@@ -13,12 +19,37 @@ const MiFormulario = () => {
       ...formData,
       [name]: value,
     });
+    setFormErrors({
+      ...formErrors,
+      [name]: "",
+    });
   };
 
   const procesarSubmit = (event) => {
     event.preventDefault();
     console.log("Formulario enviado");
     console.log(formData);
+
+    const newFormErrors = {};
+
+    if (formData.username.trim() === "") {
+      newFormErrors.username = "El nombre de usuario es obligatorio";
+    }
+
+    if (formData.email.trim() === "") {
+      newFormErrors.email = "El email es obligatorio";
+    }
+
+    if (formData.password.trim() === "") {
+      newFormErrors.password = "La contraseña es obligatoria";
+    }
+
+    if (Object.keys(newFormErrors).length > 0) {
+      setFormErrors(newFormErrors);
+    }
+
+    console.log("Formulario errores");
+    console.log(formErrors);
   };
 
   return (
@@ -34,6 +65,7 @@ const MiFormulario = () => {
             value={formData.username}
             onChange={procesarCambio}
           />
+          {formErrors.username && <p>{formErrors.username}</p>}
         </div>
         <div>
           <label htmlFor="email">Email:</label>
@@ -44,6 +76,7 @@ const MiFormulario = () => {
             value={formData.email}
             onChange={procesarCambio}
           />
+          {formErrors.email && <p>{formErrors.email}</p>}
         </div>
         <div>
           <label htmlFor="password">Contraseña:</label>
@@ -54,6 +87,7 @@ const MiFormulario = () => {
             value={formData.password}
             onChange={procesarCambio}
           />
+          {formErrors.password && <p>{formErrors.password}</p>}
         </div>
         <input type="submit" value="Registrar" onClick={procesarSubmit} />
       </form>
