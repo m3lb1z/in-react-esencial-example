@@ -1,3 +1,5 @@
+import ProductoItem from "./ProductoItem";
+
 const Catalogo = () => {
   let productos = [
     {
@@ -60,13 +62,11 @@ const Catalogo = () => {
       {productos.length === 0 ? (
         <p>No hay productos disponibles en el catalogo.</p>
       ) : (
-        <ul>
+        <div>
           {productos.map((producto) => (
-            <li key={producto.id}>
-              {producto.nombre} - S/ {producto.precio}
-            </li>
+            <ProductoItem key={producto.id} producto={producto} />
           ))}
-        </ul>
+        </div>
       )}
     </>
   );
