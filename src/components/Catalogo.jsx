@@ -1,5 +1,5 @@
 const Catalogo = () => {
-  const productos = [
+  let productos = [
     {
       id: 1,
       nombre: "Camisa blanca",
@@ -51,17 +51,23 @@ const Catalogo = () => {
       precio: 49.99,
     },
   ];
+  productos = [];
 
   return (
     <>
       <h2>Catalogo de Productos</h2>
-      <ul>
-        {productos.map((producto) => (
-          <li key={producto.id}>
-            {producto.nombre} - S/ {producto.precio}
-          </li>
-        ))}
-      </ul>
+
+      {productos.length === 0 ? (
+        <p>No hay productos disponibles en el catalogo.</p>
+      ) : (
+        <ul>
+          {productos.map((producto) => (
+            <li key={producto.id}>
+              {producto.nombre} - S/ {producto.precio}
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 };
