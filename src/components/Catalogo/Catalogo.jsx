@@ -52,12 +52,60 @@ const Catalogo = () => {
       titulo: "El Lenguaje de los Animales",
       publicado: 1994,
     },
+    {
+      id: 11,
+      titulo: "El Principito",
+      publicado: 1943,
+    },
+    {
+      id: 12,
+      titulo: "La Bella Durmiente",
+      publicado: 1959,
+    },
+    {
+      id: 13,
+      titulo: "El Hombre que Se Quedó Solo",
+      publicado: 1965,
+    },
+    {
+      id: 14,
+      titulo: "La Ciudad y los Perros",
+      publicado: 1962,
+    },
+    {
+      id: 15,
+      titulo: "El Jardín de los Cerezos",
+      publicado: 1953,
+    },
+    {
+      id: 16,
+      titulo: "La Sombra del Viento",
+      publicado: 2004,
+    },
+    {
+      id: 17,
+      titulo: "El Aleph",
+      publicado: 1949,
+    },
+    {
+      id: 18,
+      titulo: "La Metamorfosis",
+      publicado: 1915,
+    },
+    {
+      id: 19,
+      titulo: "La Casa de los Espíritus",
+      publicado: 2001,
+    },
+    {
+      id: 20,
+      titulo: "El Código Da Vinci",
+      publicado: 2003,
+    },
   ];
-
   const estilos = {
     display: "flex",
     flexWrap: "wrap",
-    backgroundColor: "red",
   };
 
   return (
