@@ -51,7 +51,7 @@ const Catalogo = () => {
       precio: 49.99,
     },
   ];
-  productos = [];
+  // productos = [];
 
   return (
     <>
