@@ -1,7 +1,12 @@
 import "./App.css";
+import MiFormulario from "./components/MiFormulario";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <MiFormulario />
+    </>
+  );
 }
 
 export default App;
