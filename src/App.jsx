@@ -1,14 +1,12 @@
-import "./App.css";
-import ContadorReducer from "./components/ContadorReducer";
-import ContadorFunciones from "./components/ContadorFunciones";
-import { MiBoton } from "./components/MiBoton";
+import Catalogo from "./components/Catalogo/Catalogo";
 
 function App() {
   return (
     <>
-      <MiBoton texto="Mi Boton Creado" />
-      <ContadorReducer />
-      <ContadorFunciones />
+      <div className="container">
+        <h1>Libros Publicados</h1>
+        <Catalogo />
+      </div>
     </>
   );
 }
