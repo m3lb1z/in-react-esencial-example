@@ -16,13 +16,6 @@ const Contents = () => {
         sol. Era un lugar donde se podía sentarse y disfrutar del silencio y la
         naturaleza.
       </p>
-      <p className="text-start">
-        La montaña era un desafío para aquellos que la subían. Era un camino
-        empinado y peligroso, lleno de piedras y raíces que podían hacer que uno
-        se resbalara. Pero la vista desde la cima era impresionante. Se podía
-        ver el valle y el río que corría a través de él. Era un lugar donde se
-        podía sentir la gloria de la naturaleza y la belleza del mundo.
-      </p>
     </>
   );
 };

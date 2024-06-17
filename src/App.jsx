@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import Producto from "./components/Producto";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/producto/:nombreParam" element={<Producto />} />
           </Routes>
         </div>
       </BrowserRouter>
