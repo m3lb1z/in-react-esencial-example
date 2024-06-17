@@ -1,7 +1,6 @@
 import "./Libro.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { styled } from "styled-components";
 
 /**
  * Componente Libro.
@@ -16,14 +15,6 @@ import { styled } from "styled-components";
  * @returns {JSX.Element} El componente Libro.
  */
 const Libro = ({ libro }) => {
-  const Titulo = styled.h2`
-    display: block;
-    padding: 0;
-    color: blue;
-    margin: 0;
-    flex-basis: 100%;
-  `;
-
   const [miClase, setMiClase] = useState("default");
 
   return (
