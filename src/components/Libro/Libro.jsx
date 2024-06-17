@@ -3,6 +3,18 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { styled } from "styled-components";
 
+/**
+ * Componente Libro.
+ *
+ * Representa un libro en la interfaz de usuario.
+ *
+ * @param {Object} props - Las propiedades del componente.
+ * @param {Object} props.libro - La información del libro.
+ * @param {string} props.libro.titulo - El título del libro.
+ * @param {number} props.libro.publicado - El año de publicación del libro.
+ *
+ * @returns {JSX.Element} El componente Libro.
+ */
 const Libro = ({ libro }) => {
   const Titulo = styled.h2`
     display: block;
